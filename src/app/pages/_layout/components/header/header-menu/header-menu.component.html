@@ -1,0 +1,72 @@
+<!-- begin::Header Nav -->
+<ul class="menu-nav" [ngClass]="ulCSSClasses">
+  <!-- begin::1 Level -->
+  <li class="menu-item menu-item-rel" routerLinkActive="menu-item-active">
+    <a class="menu-link" routerLink="/dashboard" routerLinkActive="active">
+      <span class="menu-text" translate="MENU.DASHBOARD"></span>
+      <ng-container *ngIf="rootArrowEnabled">
+        <i class="menu-arrow"></i>
+      </ng-container>
+    </a>
+  </li>
+  <!-- end::1 Level -->
+  
+  <!-- begin::1 Level -->
+  <li class="menu-item menu-item-rel" routerLinkActive="menu-item-active">
+    <a class="menu-link" routerLink="/profiles" routerLinkActive="active">
+      <span class="menu-text">Profiles</span>
+      <ng-container *ngIf="rootArrowEnabled">
+        <i class="menu-arrow"></i>
+      </ng-container>
+    </a>
+  </li>
+  <!-- end::1 Level -->
+  
+  <!-- begin::1 Level -->
+  <li class="menu-item menu-item-rel" routerLinkActive="menu-item-active">
+    <a class="menu-link" routerLink="/campaigns" routerLinkActive="active">
+      <span class="menu-text">Campaigns</span>
+      <ng-container *ngIf="rootArrowEnabled">
+        <i class="menu-arrow"></i>
+      </ng-container>
+    </a>
+  </li>
+  <!-- end::1 Level -->
+  
+  <!-- begin::1 Level -->
+  <li class="menu-item menu-item-rel" routerLinkActive="menu-item-active">
+    <a class="menu-link" routerLinkActive="active">
+      <span [inlineSVG]="'./assets/media/svg/icons/Text/Menu.svg'" cacheSVG="true"
+      class="svg-icon svg-icon-xl svg-icon-primary"></span>
+      <ng-container *ngIf="rootArrowEnabled">
+        <i class="menu-arrow"></i>
+      </ng-container>
+    </a>
+  </li>
+  <!-- end::1 Level -->
+  
+  <!-- begin::1 Level -->
+  <li class="menu-item menu-item-rel" routerLinkActive="menu-item-active">
+    <a class="menu-link" routerLinkActive="active">
+      <span [inlineSVG]="'./assets/media/svg/icons/General/Star.svg'" cacheSVG="true"
+      class="svg-icon svg-icon-xl svg-icon-primary"></span>
+      <ng-container *ngIf="rootArrowEnabled">
+        <i class="menu-arrow"></i>
+      </ng-container>
+    </a>
+  </li>
+  <!-- end::1 Level -->
+  
+  <!-- begin::1 Level -->
+  <li class="menu-item menu-item-rel" routerLinkActive="menu-item-active">
+    <a class="menu-link" routerLinkActive="active">
+      <span [inlineSVG]="'./assets/media/svg/icons/General/Search.svg'" cacheSVG="true"
+      class="svg-icon svg-icon-xl svg-icon-primary"></span>
+      <ng-container *ngIf="rootArrowEnabled">
+        <i class="menu-arrow"></i>
+      </ng-container>
+    </a>
+  </li>
+  <!-- end::1 Level -->
+</ul>
+<!-- end::Header Nav -->

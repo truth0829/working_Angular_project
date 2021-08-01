@@ -1,0 +1,69 @@
+<!--begin::Topbar-->
+<ng-container *ngIf="extrasNotificationsDisplay">
+  <ng-container *ngIf="extrasNotificationsLayout === 'dropdown'">
+    <!--begin::Notifications-->
+    <div class="dropdown" ngbDropdown placement="bottom">
+      <!--begin::Toggle-->
+      <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" ngbDropdownToggle>
+        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
+          <span [inlineSVG]="'./assets/media/svg/icons/Communication/Chat6.svg'" cacheSVG="true"
+            class="svg-icon svg-icon-xl svg-icon-primary"></span>
+          <span class="pulse-ring"></span>
+        </div>
+      </div>
+      <!--end::Toggle-->
+    </div>
+    <!--end::Notifications-->
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="extrasQuickActionsDisplay">
+  <ng-container *ngIf="extrasQuickActionsLayout === 'offcanvas'">
+    <!--begin::Quick Actions-->
+    <div class="topbar-item">
+      <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_actions_toggle">
+        <span [inlineSVG]="'./assets/media/svg/icons/General/Notifications1.svg'" cacheSVG="true"
+          class="svg-icon svg-icon-xl svg-icon-primary"></span>
+      </div>
+    </div>
+    <!--end::Quick Actions-->
+  </ng-container>
+  <ng-container *ngIf="extrasQuickActionsLayout === 'dropdown'">
+    <!--begin::Quick Actions-->
+    <div class="dropdown" ngbDropdown placement="bottom">
+      <!--begin::Toggle-->
+      <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px" ngbDropdownToggle>
+        <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
+          <span [inlineSVG]="'./assets/media/svg/icons/General/Notifications1.svg'" cacheSVG="true"
+            class="svg-icon svg-icon-xl svg-icon-primary"></span>
+        </div>
+      </div>
+      <!--end::Toggle-->
+    </div>
+    <!--end::Quick Actions-->
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="extrasUserDisplay">
+  <ng-container *ngIf="extrasUserLayout === 'offcanvas'">
+    <ng-container *ngIf="user$ | async as _user">
+      <!--begin::User-->
+      <div class="topbar-item">
+        <div class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2"
+          id="kt_quick_user_toggle1">
+          <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+          <span
+            class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{{ _user.fullname }}</span>
+          <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
+            <span class="symbol-label font-size-h5 font-weight-bold">{{
+              _user.fullname[0]
+            }}</span>
+          </span>
+        </div>
+      </div>
+      <!--end::User-->
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<!--end::Topbar-->
