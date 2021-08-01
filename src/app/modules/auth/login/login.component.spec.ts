@@ -18,8 +18,8 @@ import { TranslationModule } from '../../i18n/translation.module';
 import { TranslateModule } from '@ngx-translate/core';
 
 const fakeAuth = {
-  email: 'admin@demo.com',
-  password: 'demo',
+  email: 'dpam8280@gmail.com',
+  password: '12345',
 };
 
 const mockActivatedRoute = {
@@ -46,7 +46,7 @@ class FakeAuthService {
     const user = new UserModel();
     user.username = 'admin';
     user.password = 'demo';
-    user.email = 'admin@demo.com';
+    user.email = 'dpam8280@gmail.com';
     return of(user);
   }
 }

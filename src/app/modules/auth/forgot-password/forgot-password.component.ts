@@ -42,7 +42,7 @@ export class ForgotPasswordComponent implements OnInit {
   initForm() {
     this.forgotPasswordForm = this.fb.group({
       email: [
-        'admin@demo.com',
+        'dpam8280@gmail.com',
         Validators.compose([
           Validators.required,
           Validators.email,

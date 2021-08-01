@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { LayoutService } from '../../../../core';
 import { SubheaderService } from '../_services/subheader.service';
 import { BreadcrumbItemModel } from '../_models/breadcrumb-item.model';
+import { ProfilesComponent } from '../../../../../pages/profiles/profiles.component';
 
 @Component({
   selector: 'app-subheader1',
@@ -20,10 +21,13 @@ export class Subheader1Component implements OnInit {
   description$: Observable<string>;
   @Input() title: string;
 
+  private isProfilePage: Boolean;
+  isTrue;
+
   constructor(
     private layout: LayoutService,
     private subheader: SubheaderService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
   ) {
     this.title$ = this.subheader.titleSubject.asObservable();
   }

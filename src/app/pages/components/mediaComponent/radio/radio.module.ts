@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ProfilesComponent } from './profiles.component';
-
+import { RadioComponent } from './radio.component';
+import { MatTabsModule } from '@angular/material/tabs';
 @NgModule({
-  declarations: [ProfilesComponent],
+  declarations: [RadioComponent],
   imports: [
+    MatTabsModule,
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: ProfilesComponent,
+        component: RadioComponent,
       },
     ]),
   ],
 })
-export class ProfilesModule {}
+export class RadioModule {}
