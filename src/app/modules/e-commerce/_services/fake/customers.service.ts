@@ -1,21 +1,11 @@
 import { Injectable, OnDestroy, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
+import { forkJoin, Observable } from 'rxjs';
 import { exhaustMap, map } from 'rxjs/operators';
-import { TableService, TableResponseModel, ITableState, BaseModel, PaginatorState, SortState, GroupingState } from '../../../../_metronic/shared/crud-table';
+import { TableService, TableResponseModel, ITableState, BaseModel } from '../../../../_metronic/shared/crud-table';
 import { Customer } from '../../_models/customer.model';
 import { baseFilter } from '../../../../_fake/fake-helpers/http-extenstions';
 import { environment } from '../../../../../environments/environment';
-import { Router } from '@angular/router';
-
-const DEFAULT_STATE: ITableState = {
-  filter: {},
-  paginator: new PaginatorState(),
-  sorting: new SortState(),
-  searchTerm: '',
-  grouping: new GroupingState(),
-  entityId: undefined
-};
 
 @Injectable({
   providedIn: 'root'

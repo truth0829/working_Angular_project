@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit, OnDestroy {
   //   password: '',
   // };
   defaultAuth: any = {
-    email: 'dpam8280@gmail.com',
-    password: '12345',
+    email: 'admin@demo.com',
+    password: 'demo',
   };
   loginForm: FormGroup;
   hasError: boolean;

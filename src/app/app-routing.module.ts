@@ -9,6 +9,11 @@ export const routes: Routes = [
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
+    path: 'error',
+    loadChildren: () =>
+      import('./modules/errors/errors.module').then((m) => m.ErrorsModule),
+  },
+  {
     path: '',
     canActivate: [AuthGuard],
     loadChildren: () =>

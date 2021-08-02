@@ -12,7 +12,6 @@ function getCurrentURL(location) {
   styleUrls: ['./header-menu.component.scss'],
 })
 export class HeaderMenuComponent implements OnInit {
-  // isProfiles: any;
   ulCSSClasses: string;
   rootArrowEnabled: boolean;
   location: Location;
@@ -42,9 +41,6 @@ export class HeaderMenuComponent implements OnInit {
     }
 
     if (current === url) {
-      // if(current === "isProfiles"){
-      //   this.isProfiles = true;
-      // }
       return true;
     }
 

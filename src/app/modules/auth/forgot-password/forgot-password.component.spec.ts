@@ -14,8 +14,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 const fakeAuth = {
-  email: 'dpam8280@gmail.com',
-  password: '12345',
+  email: 'admin@demo.com',
+  password: 'demo',
 };
 
 class FakeAuthService {

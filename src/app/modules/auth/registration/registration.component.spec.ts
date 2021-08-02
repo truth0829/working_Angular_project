@@ -15,8 +15,8 @@ import { AuthService } from '../_services/auth.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 const fakeAuth = {
-  email: 'dpam8280@gmail.com',
-  password: '12345',
+  email: 'admin@demo.com',
+  password: 'demo',
   roles: [2], // Manager
   authToken: 'auth-token-' + Math.random(),
   refreshToken: 'auth-token-' + Math.random(),

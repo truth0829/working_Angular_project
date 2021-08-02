@@ -1,4 +1,5 @@
 // tslint:disable:no-string-literal
+
 // https://codecraft.tv/courses/angular/unit-testing/model-driven-forms/
 import {
   waitForAsync,
@@ -18,8 +19,8 @@ import { TranslationModule } from '../../i18n/translation.module';
 import { TranslateModule } from '@ngx-translate/core';
 
 const fakeAuth = {
-  email: 'dpam8280@gmail.com',
-  password: '12345',
+  email: 'admin@demo.com',
+  password: 'demo',
 };
 
 const mockActivatedRoute = {
@@ -46,7 +47,7 @@ class FakeAuthService {
     const user = new UserModel();
     user.username = 'admin';
     user.password = 'demo';
-    user.email = 'dpam8280@gmail.com';
+    user.email = 'admin@demo.com';
     return of(user);
   }
 }
@@ -100,14 +101,13 @@ describe('LoginComponent', () => {
 
   it('email field validity', () => {
     let errors = {};
-    const email = component.loginForm.controls.email;
+    const email = component.loginForm.controls['email'];
     expect(email.valid).toBeTruthy();
 
     // Email field is required
     // Set empty email first
     email.setValue('');
     errors = email.errors || {};
-    // tslint:disable-next-line:no-string-literal
     expect(errors['required']).toBeTruthy();
 
     // Set email to something

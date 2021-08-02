@@ -23,10 +23,10 @@
 // @import "./assets/sass/style.angular.rtl.css";
 
 // Default Layout themes
-@import "./assets/sass/themes/layout/header/base/light.scss";
-@import "./assets/sass/themes/layout/header/menu/light.scss";
-@import "./assets/sass/themes/layout/brand/dark.scss";
-@import "./assets/sass/themes/layout/aside/dark.scss";
+// @import "./assets/sass/themes/layout/header/base/light.scss";
+// @import "./assets/sass/themes/layout/header/menu/light.scss";
+// @import "./assets/sass/themes/layout/brand/dark.scss";
+// @import "./assets/sass/themes/layout/aside/dark.scss";
 
 // Header themes
 // .header-base-light {
@@ -46,13 +46,13 @@
 // }
 
 // Brand themes
-.brand-dark {
-  @import "./assets/sass/themes/layout/brand/dark.scss";
-}
+// .brand-dark {
+//   @import "./assets/sass/themes/layout/brand/dark.scss";
+// }
 
-.brand-light {
-  @import "./assets/sass/themes/layout/brand/light.scss";
-}
+// .brand-light {
+//   @import "./assets/sass/themes/layout/brand/light.scss";
+// }
 
 // Aside themes
 // .aside-dark {
@@ -91,7 +91,7 @@
   }
 
   .table.table-head-custom thead th.sortable-active {
-    color: #3699FF !important;
+    color: #1BC5BD !important;
   }
 }
 

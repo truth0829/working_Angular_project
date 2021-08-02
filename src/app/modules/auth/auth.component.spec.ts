@@ -26,7 +26,7 @@ describe('AuthComponent', () => {
   it('should have <h3> with text </h3>', () => {
     const authComponent: HTMLElement = fixture.nativeElement;
     const h3 = authComponent.querySelector('h3');
-    expect(h3.textContent).toMatch(/VAZEX/i);
+    expect(h3.textContent).toMatch(/discover amazing metronic with great build tools/i);
   });
 
   it('should have links in the footer', () => {

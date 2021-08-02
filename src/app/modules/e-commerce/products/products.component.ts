@@ -1,6 +1,8 @@
 // tslint:disable:no-string-literal
+
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -52,14 +54,15 @@ export class ProductsComponent
   constructor(
     private fb: FormBuilder,
     private modalService: NgbModal,
-    public productsService: ProductsService
+    public productsService: ProductsService,
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   // angular lifecircle hooks
   ngOnInit(): void {
     this.filterForm();
     this.searchForm();
-    this.productsService.fetch();
     const sb = this.productsService.isLoading$.subscribe(res => this.isLoading = res);
     this.subscriptions.push(sb);
     this.grouping = this.productsService.grouping;

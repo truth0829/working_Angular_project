@@ -1,5 +1,5 @@
 export const DefaultLayoutConfig = {
-  demo: 'demo1',
+  demo: 'demo3',
   // Javascript Settings
   js: {
     breakpoints: {
@@ -7,54 +7,54 @@ export const DefaultLayoutConfig = {
       md: 768,
       lg: 992,
       xl: 1200,
-      xxl: 1400,
+      xxl: 1200,
     },
     colors: {
       theme: {
         base: {
           white: '#ffffff',
-          primary: '#3699FF',
+          primary: '#1BC5BD',
           secondary: '#E5EAEE',
           success: '#1BC5BD',
-          info: '#8950FC',
+          info: '#6993FF',
           warning: '#FFA800',
           danger: '#F64E60',
-          light: '#E4E6EF',
-          dark: '#181C32',
+          light: '#F3F6F9',
+          dark: '#212121'
         },
         light: {
           white: '#ffffff',
-          primary: '#E1F0FF',
-          secondary: '#EBEDF3',
+          primary: '#1BC5BD',
+          secondary: '#ECF0F3',
           success: '#C9F7F5',
-          info: '#EEE5FF',
+          info: '#E1E9FF',
           warning: '#FFF4DE',
           danger: '#FFE2E5',
           light: '#F3F6F9',
-          dark: '#D6D6E0',
+          dark: '#D6D6E0'
         },
         inverse: {
           white: '#ffffff',
           primary: '#ffffff',
-          secondary: '#3F4254',
+          secondary: '#212121',
           success: '#ffffff',
           info: '#ffffff',
           warning: '#ffffff',
           danger: '#ffffff',
           light: '#464E5F',
-          dark: '#ffffff',
+          dark: '#ffffff'
         },
       },
       gray: {
         'gray-100': '#F3F6F9',
-        'gray-200': '#EBEDF3',
-        'gray-300': '#E4E6EF',
-        'gray-400': '#D1D3E0',
+        'gray-200': '#ECF0F3',
+        'gray-300': '#E5EAEE',
+        'gray-400': '#D6D6E0',
         'gray-500': '#B5B5C3',
-        'gray-600': '#7E8299',
-        'gray-700': '#5E6278',
-        'gray-800': '#3F4254',
-        'gray-900': '#181C32',
+        'gray-600': '#80808F',
+        'gray-700': '#464E5F',
+        'gray-800': '#1B283F',
+        'gray-900': '#212121',
       },
     },
     fontFamily: 'Poppins',
@@ -63,6 +63,7 @@ export const DefaultLayoutConfig = {
   // Base Settins
   self: {
     layout: 'default', // blank/default page mode
+    body: {}
   },
 
   // Page loader
@@ -73,52 +74,22 @@ export const DefaultLayoutConfig = {
   // Header
   header: {
     self: {
-      display: true,
-      width: 'fluid', // fixed|fluid,
-      theme: 'light', // light|dark
       fixed: {
-        desktop: true,
         mobile: true,
       },
-    },
-
-    menu: {
-      self: {
-        display: true,
-        static: true, // static => true | dynamic => true
-        layout: 'default', // tab/default,
-        rootArrow: false,
-        iconStyle: 'duotone', // duotone, line, bold, solid
-      },
-
-      desktop: {
-        arrow: true,
-        toggle: 'click',
-        submenu: {
-          theme: 'light',
-          arrow: true,
-        },
-      },
-
-      mobile: {
-        submenu: {
-          theme: 'dark',
-          accordion: true,
-        },
-      },
-    },
+    }
   },
 
   // Subheader
   subheader: {
     display: true,
-    displayDesc: true,
+    displayDesc: false,
     displayDaterangepicker: true,
-    layoutVersion: 'v1', // [1..6]
-    fixed: true,
-    width: 'fluid', // fixed|fluid,
+    layoutVersion: 'v6', // [1..6]
+    fixed: false,
+    width: 'fixed', // fixed|fluid,
     clear: false,
-    style: 'solid', // transparent/solid
+    style: 'transparent', // transparent/solid
   },
 
   // Content
@@ -126,30 +97,19 @@ export const DefaultLayoutConfig = {
     width: 'fixed', // fluid|fixed
   },
 
-  // Brand
-  brand: {
-    self: {
-      theme: 'dark', // light/dark
-    },
-  },
-
   // Aside
   aside: {
     self: {
-      theme: 'dark', // light/dark
       display: true,
       fixed: true,
       minimize: {
         toggle: true, // allow toggle
         default: false, // default state
-        hoverable: true, // allow hover
       },
     },
 
-    footer: {
-      self: {
-        display: false,
-      },
+    secondary: {
+      display: true
     },
 
     menu: {
@@ -159,18 +119,17 @@ export const DefaultLayoutConfig = {
       iconStyle: 'duotone', // duotone, line, bold, solid
       submenu: {
         accordion: true, //
-        dropdown: {
-          arrow: true,
-          hoverTimeout: 500, // in milliseconds
-        },
+        // dropdown: {
+        //   arrow: true,
+        //   hoverTimeout: 500, // in milliseconds
+        // },
       },
     },
   },
 
   // Footer
   footer: {
-    display: true,
-    width: 'fluid',
+    width: 'fixed', // fixed|fluid
     fixed: true,
   },
 
@@ -178,34 +137,34 @@ export const DefaultLayoutConfig = {
   extras: {
     // Search
     search: {
-      display: true,
-      layout: 'dropdown', // offcanvas, dropdown,
+      display: false,
+      layout: 'offcanvas', // offcanvas, dropdown,
       offcanvas: {
-        direction: 'right',
+        direction: 'left',
       },
     },
 
     // Notifications
     notifications: {
-      display: true,
-      layout: 'dropdown', // offcanvas, dropdown,
+      display: false,
+      layout: 'offcanvas', // offcanvas, dropdown,
       dropdown: {
         style: 'dark', // light|dark
       },
       offcanvas: {
-        direction: 'right',
+        direction: 'left',
       },
     },
 
     // Quick Actionss
     quickActions: {
       display: true,
-      layout: 'dropdown', // offcanvas, dropdown,
+      layout: 'offcanvas', // offcanvas, dropdown,
       dropdown: {
         style: 'dark', // light|dark
       },
       offcanvas: {
-        direction: 'right',
+        direction: 'left',
       },
     },
 
@@ -217,21 +176,21 @@ export const DefaultLayoutConfig = {
         style: 'dark', // light|dark
       },
       offcanvas: {
-        direction: 'right',
+        direction: 'left',
       },
     },
 
     // Languages
     languages: {
-      display: true,
+      display: false,
     },
 
     // Cart
     cart: {
-      display: true,
-      layout: 'dropdown', // offcanvas, dropdown,
+      display: false,
+      layout: 'offcanvas', // offcanvas, dropdown,
       offcanvas: {
-        direction: 'right',
+        direction: 'left',
       },
       dropdown: {
         style: 'dark', // light|dark
@@ -247,7 +206,7 @@ export const DefaultLayoutConfig = {
     quickPanel: {
       display: true,
       offcanvas: {
-        direction: 'right',
+        direction: 'left  ',
       },
     },
 

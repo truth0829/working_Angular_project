@@ -6,10 +6,8 @@ import KTLayoutAsideToggle from '../../../../../assets/js/layout/base/aside-togg
 import KTLayoutStickyCard from '../../../../../assets/js/layout/base/sticky-card';
 import KTLayoutStretchedCard from '../../../../../assets/js/layout/base/stretched-card';
 import { LayoutService } from '../../../../_metronic/core';
-import KTLayoutBrand from '../../../../../assets/js/layout/base/brand';
 import KTLayoutAside from '../../../../../assets/js/layout/base/aside';
 import KTLayoutAsideMenu from '../../../../../assets/js/layout/base/aside-menu';
-import KTLayoutQuickUser from '../../../../../assets/js/layout/extended/quick-user';
 
 @Component({
   selector: 'app-scripts-init',
@@ -25,13 +23,11 @@ export class ScriptsInitComponent implements OnInit, AfterViewInit, OnDestroy {
     this.asideSelfMinimizeToggle = this.layout.getProp(
       'aside.self.minimize.toggle'
     );
-    this.routingChanges();
+    // this.routingChanges();
   }
 
   ngAfterViewInit() {
     KTUtil.ready(() => {
-      // Init Brand Panel For Logo
-      KTLayoutBrand.init('kt_brand');
       // Init Aside
       KTLayoutAside.init('kt_aside');
       // Init Aside Menu
@@ -52,11 +48,6 @@ export class ScriptsInitComponent implements OnInit, AfterViewInit, OnDestroy {
   routingChanges() {
     const routerSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd || event instanceof NavigationCancel) {
-        const offCanvas = KTLayoutAside.getOffcanvas();
-        if (offCanvas) {
-          offCanvas.hide();
-        }
-
         const btnQuickUserClose = document.getElementById('kt_quick_user_close');
         if (btnQuickUserClose) {
           btnQuickUserClose.click();

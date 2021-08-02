@@ -5,7 +5,6 @@ import { UsersTable } from './fake-db/users.table';
 import { CarsTable } from './fake-db/cars.table';
 // ECommerce
 import { ECommerceDataContext } from '../modules/e-commerce/_fake/fake-server/_e-commerce.data-context';
-import { CompanyData } from './fake-db/company.Data';
 
 @Injectable({
   providedIn: 'root',
@@ -24,9 +23,6 @@ export class FakeAPIService implements InMemoryDbService {
 
       // data-table
       cars: CarsTable.cars,
-
-      // company-data
-      companies: CompanyData.companies,
 
       customers: ECommerceDataContext.customers,
       // products

@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+:host .aside .tooltip {
+  z-index: 1000 !important;
+}
+
 :host .menu-text {
   white-space: nowrap;
 }

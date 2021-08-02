@@ -242,12 +242,12 @@ const routes: Routes = [
         path: 'data-table/table',
         component: MaterialTableComponent,
       },
-      // { path: '', redirectTo: 'form-controls/autocomplete', pathMatch: 'full' },
-      // {
-      //   path: '**',
-      //   redirectTo: 'form-controls/autocomplete',
-      //   pathMatch: 'full',
-      // },
+      { path: '', redirectTo: 'form-controls/autocomplete', pathMatch: 'full' },
+      {
+        path: '**',
+        redirectTo: 'form-controls/autocomplete',
+        pathMatch: 'full',
+      },
     ],
   },
 ];
